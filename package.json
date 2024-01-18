@@ -9,4 +9,8 @@
   },
   "author": "",
   "license": "ISC"
+},
+
+"bin": {
+  "brain-games": "bin/brain-games.js"
 }
