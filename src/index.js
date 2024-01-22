@@ -1,13 +1,14 @@
 import {
     greet, getUserAnswer, printGameRules, printQuestion, printCorrectMsg, printEndGameMsg, printWrongAnswMsg
 } from './cli.js';
-import { interpolate } from './utils.js';
+import { interpolate } from './indexTasks.js';
 
 import evenGame from './games/even.js';
 import calcGame from './games/calc.js';
 
 const gameGuidelines = {
     even: ['Answer "yes" if the number is even, otherwise answer "no".'],
+    calc: ['What is the result of the expression?'],
 };
 
 const playRound = (game) => {
@@ -46,5 +47,5 @@ const playEven = pickingGame(evenGame, gameGuide.evem);
 const playCalc = selectGame(calcGame, gameRules.calc);
 
 export {
-    playEven, playCalc 
+    playEven, playCalc
 }
