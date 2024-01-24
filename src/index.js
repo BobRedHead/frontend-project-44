@@ -1,29 +1,26 @@
 import readlineSync from 'readline-sync';
-import welcomeToTheBrainGames from './cli.js';
 
-const gameInit = (gameTutorial, gameLogic) => {
-  const yourName = welcomeToTheBrainGames();
-  console.log(gameTutorial);
+const roundCount = 3;
 
-  let i = 0;
-  const gameRoundCount = 3;
+const startGame = (guide, playRound) => {
+  console.log('Welcome to the Brain Games!');
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!`);
+  console.log(guide);
 
-  while (i < gameRoundCount) {
-    const [roundQuestion, roundRealAnswer] = gameLogic();
-    console.log(`Question: ${roundQuestion}`);
-    const roundAnswer = readlineSync.question('Your answer: ');
-    if (roundAnswer === roundRealAnswer.toString()) {
+  for (let i = 0; i < roundCount; i += 1) {
+    const [question, correctAnswer] = playRound();
+    console.log(`Question: ${question}`);
+    const answer = readlineSync.question('Your answer: ');
+
+    if (answer === correctAnswer) {
       console.log('Correct!');
-      i += 1;
     } else {
-      console.log(`'${roundAnswer}' is wrong answer ;(. Correct answer was '${roundRealAnswer}'.`);
-      console.log(`Let's try again, ${yourName}!`);
-      break;
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'\nLet's try again, ${userName}!`);
+      return;
     }
   }
-  if (i === gameRoundCount) {
-    console.log(`Congratulations, ${yourName}!`);
-  }
+  console.log(`Congratulations, ${userName}!`);
 };
 
-export default gameInit;
+export default startGame;
