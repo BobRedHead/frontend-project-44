@@ -1,18 +1,18 @@
 import startGame from '../index.js';
 import getRandomNumber from '../indexTast.js';
 
-const guide = 'Answer "yes" if the number is even, otherwise answer "no".';
-const isEven = (num) => num % 2 === 0;
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
+const isEven = (number) => number % 2 === 0;
 
-const playRound = () => {
-  const num = getRandomNumber(1, 100);
+const startEvenGame = () => {
+  const number = getRandomNumber(1, 100);
 
-  const correctAnswer = isEven(num) ? 'yes' : 'no';
-  const question = (`${num}`);
+  const correctAnswer = isEven(number) ? 'yes' : 'no';
+  const question = (`${number}`);
 
   return [question, correctAnswer];
 };
 
 export default () => {
-  startGame(guide, playRound);
+  startGame(description, startEvenGame);
 };
