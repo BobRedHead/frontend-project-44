@@ -3,8 +3,7 @@ import getRandomNumber from '../indexTast.js';
 
 const description = 'What is the result of the expression?';
 
-
-const calculateTheAnswer = (number1, questOperator, number2,) => {
+const calculateTheAnswer = (number1, questOperator, number2) => {
   switch (questOperator) {
     case '+':
       return number1 + number2;
