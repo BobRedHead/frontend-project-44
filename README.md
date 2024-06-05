@@ -2,7 +2,7 @@
 [![Actions Status](https://github.com/BobRedHead/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/BobRedHead/frontend-project-44/actions)
 
 # **Brain Games project**
-[![Actions Status](https://github.com/latnikou/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/latnikou/frontend-project-44/actions) [![Maintainability](https://api.codeclimate.com/v1/badges/2d8e6a665dfdbe80b73d/maintainability)](https://codeclimate.com/github/latnikou/frontend-project-44/maintainability)
+[![Actions Status](https://github.com/BobRedHead/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/BobRedHead/frontend-project-44/actions)[![Maintainability](https://api.codeclimate.com/v1/badges/416f91e41bc49f5276f8/maintainability)](https://codeclimate.com/github/BobRedHead/frontend-project-44/maintainability)
 
 **"Brain Games"** is a set of five console games inspired by popular mobile brain-pumping apps. Each game asks questions to be answered correctly. Once three correct answers are given, the game ends. Incorrect answers end the game and prompt you to play it again. 
 The games are: 
